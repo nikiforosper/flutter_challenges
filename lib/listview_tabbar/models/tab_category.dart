@@ -20,4 +20,9 @@ class TabCategory {
       offsetTo: offsetTo,
     );
   }
+
+  @override
+  String toString() {
+    return 'TabCategory(category: $category, isSelected: $isSelected, offsetFrom: $offsetFrom, offsetTo: $offsetTo)';
+  }
 }

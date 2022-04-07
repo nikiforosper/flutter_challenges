@@ -41,22 +41,19 @@ class _ListViewTabbarState extends State<ListViewTabbar>
   }
 
   void init() {
-    tabController = TabController(length: rappiCategories.length, vsync: this);
+    tabController = TabController(length: categories.length, vsync: this);
     double offsetFrom = 0.0;
     double offsetTo = 0.0;
-    for (var i = 0; i < rappiCategories.length; i++) {
-      final category = rappiCategories[i];
-
+    for (var i = 0; i < categories.length; i++) {
+      final category = categories[i];
       if (i > 0) {
-        offsetFrom += rappiCategories[i - 1].products.length * productHeight;
+        offsetFrom += categories[i - 1].products.length * productHeight;
       }
-      if (i < rappiCategories.length - 1) {
-        offsetTo =
-            offsetFrom + rappiCategories[i + 1].products.length * productHeight;
+      if (i < categories.length - 1) {
+        offsetTo = offsetFrom + categories[i].products.length * productHeight;
       } else {
         offsetTo = double.infinity;
       }
-
       tabs.add(TabCategory(
         category: category,
         isSelected: i == 0,
@@ -69,7 +66,7 @@ class _ListViewTabbarState extends State<ListViewTabbar>
         items.add(Item(product: product));
       }
     }
-
+    setState(() {});
     scrollController.addListener(_onScrollListener);
   }
 
@@ -81,6 +78,7 @@ class _ListViewTabbarState extends State<ListViewTabbar>
             scrollController.offset <= tab.offsetTo &&
             !tab.isSelected) {
           onCategorySelected(i, animationRequired: false);
+          setState(() {});
           tabController.animateTo(i);
           break;
         }
@@ -172,17 +170,22 @@ class _ListViewTabbarState extends State<ListViewTabbar>
     TabCategory selected = tabs[index];
     for (var i = 0; i < tabs.length; i++) {
       final condition = selected.category.name == tabs[i].category.name;
-      tabs[i] = tabs[i].copyWith(condition);
+      setState(() {
+        tabs[i] = tabs[i].copyWith(condition);
+      });
     }
     if (animationRequired) {
-      _listen = false;
+      setState(() {
+        _listen = false;
+      });
       await scrollController.animateTo(
         selected.offsetFrom,
         duration: const Duration(milliseconds: 500),
         curve: Curves.linear,
       );
-      _listen = true;
+      setState(() {
+        _listen = true;
+      });
     }
-    setState(() {});
   }
 }

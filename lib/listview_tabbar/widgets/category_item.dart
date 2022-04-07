@@ -49,7 +49,7 @@ class ProductItem extends StatelessWidget {
           child: Row(
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Image.asset(product.image),
               ),
               const SizedBox(width: 10),
@@ -66,7 +66,7 @@ class ProductItem extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(height: 6),
+                    const SizedBox(height: 5),
                     Text(
                       product.description,
                       overflow: TextOverflow.ellipsis,
@@ -76,7 +76,7 @@ class ProductItem extends StatelessWidget {
                         fontSize: 12,
                       ),
                     ),
-                    const SizedBox(height: 6),
+                    const SizedBox(height: 5),
                     Text(
                       "${product.price.toStringAsFixed(2)}€",
                       style: const TextStyle(

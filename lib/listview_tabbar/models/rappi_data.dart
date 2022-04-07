@@ -20,7 +20,7 @@ class Product {
   });
 }
 
-List<Category> rappiCategories = [
+List<Category> categories = [
   Category(
     name: "Category 1",
     products: [
@@ -94,6 +94,34 @@ List<Category> rappiCategories = [
       ),
       Product(
         name: "product 2.3",
+        price: 20.0,
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        image: "assets/pizza.png",
+      ),
+      Product(
+        name: "product 2.4",
+        price: 20.0,
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        image: "assets/pizza.png",
+      ),
+      Product(
+        name: "product 2.5",
+        price: 20.0,
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        image: "assets/pizza.png",
+      ),
+      Product(
+        name: "product 2.6",
+        price: 20.0,
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        image: "assets/pizza.png",
+      ),
+      Product(
+        name: "product 2.7",
         price: 20.0,
         description:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
