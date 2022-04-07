@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/listview_tabbar/category_item.dart';
 import 'package:flutter_application_1/listview_tabbar/models/item.dart';
 import 'package:flutter_application_1/listview_tabbar/models/rappi_data.dart';
 import 'package:flutter_application_1/listview_tabbar/models/tab_category.dart';
-import 'package:flutter_application_1/listview_tabbar/tab_widget.dart';
+import 'package:flutter_application_1/listview_tabbar/widgets/category_item.dart';
+import 'package:flutter_application_1/listview_tabbar/widgets/tab_widget.dart';
 
 const backgroundColor = Color(0xfff6f9fa);
 const blueColor = Color(0xff0f1863);
