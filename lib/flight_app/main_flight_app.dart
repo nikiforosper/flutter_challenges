@@ -64,13 +64,13 @@ class _MainFlightAppState extends State<MainFlightApp> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: const [
                           HeaderButton(
-                            title: "OneWay",
+                            title: "Tab1",
                           ),
                           HeaderButton(
-                            title: "Round",
+                            title: "Tab2",
                           ),
                           HeaderButton(
-                            title: "Multicity",
+                            title: "Tab3",
                             isSelected: true,
                           ),
                         ],
