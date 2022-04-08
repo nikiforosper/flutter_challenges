@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_1/flight_app/main_flight_app.dart';
 import 'package:flutter_application_1/listview_tabbar/listview_tabbar.dart';
 import 'package:flutter_application_1/map/main_animated.markers_map.dart';
 import 'package:flutter_application_1/sliver_animation_card/sliver_animation_card.dart';
@@ -76,6 +77,19 @@ class MyHomePage extends StatelessWidget {
                         return FadeTransition(
                           opacity: animation,
                           child: const ListViewTabbar(),
+                        );
+                      },
+                    ),
+                  ),
+                ),
+                ListTile(
+                  title: const Text("Flight App"),
+                  onTap: () => Navigator.of(context).push(
+                    PageRouteBuilder(
+                      pageBuilder: (_, animation, __) {
+                        return FadeTransition(
+                          opacity: animation,
+                          child: const MainFlightApp(),
                         );
                       },
                     ),
